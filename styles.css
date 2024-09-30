@@ -251,5 +251,39 @@ nav ul li a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.join-us-section {
+    padding: 40px;
+    background-color: #f2df74; /* Light Yellow */
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.join-us-section h2 {
+    font-size: 2em;
+    color: #772432; /* Dark Red */
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.instagram-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0077b5; /* Instagram color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.instagram-button:hover {
+    background-color: #005f8a; /* Darker shade on hover */
+}
 
 
