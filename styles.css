@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    background-color: #772432; /* Dark Red */
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: #772432;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    padding: 12px 16px;
+}
+
+.dropdown-content li a {
+    color: #772432;
+    text-decoration: none;
+}
+
+.dropdown-content li:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 5px;
+    font-size: 1em;
+}
+
+/* Overlapped Section */
+.overlapped-section {
+    position: relative;
+    background-image: url('IMG_20240526_172835.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Adjust height as necessary */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black layer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.whatsapp-link {
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.whatsapp-link:hover {
+    background-color: #1EBE5A;
+}
+
+.meetings-section {
+    background-color: #f7f5ed; /* Light Yellow */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.meetings-section h2 {
+    color: #772432; /* Dark Red */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.meeting-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.meeting-info {
+    background: rgba(0, 0, 0, 0.1); /* Light transparent black */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%; /* Adjust width as needed */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.meeting-info h3 {
+    color: #004165; /* Blue */
+    margin-bottom: 10px;
+}
+
+.meeting-info p, .meeting-info ul {
+    color: #333;
+}
+.meeting-textbox {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #004165; /* Blue */
+    border-radius: 5px;
+    background-color: #fff; /* White */
+    color: #333;
+    margin-right: 10px;
+}
+
+.meeting-link {
+    background-color: #772432; /* Dark Red */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.why-join-us-section {
+    padding: 40px;
+    background-image: linear-gradient(to right, #f2df74, #a9b2b1);
+    text-align: center;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.why-join-us-section h1 {
+    font-size: 3em;
+    color: #772432; /* Dark Red */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.point strong {
+    display: inline; /* Ensure points are on the same line */
+    font-size: 1.2em;
+    color: #004165; /* Blue */
+}
+
+.points-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.point {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.point:hover {
+    transform: translateY(-5px);
+}
+
+.point strong {
+    display: block;
+    font-size: 1.2em;
+    color: #004165; /* Blue */
+}
+
+.point p {
+    margin-top: 5px;
+    color: #333;
+}
+
+.glimpses-section {
+    padding: 40px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.glimpses-section h2 {
+    font-size: 2.5em;
+    color: #004165; /* Blue */
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery-item {
+    width: 200px; /* Adjust as needed */
+    height: 150px; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
