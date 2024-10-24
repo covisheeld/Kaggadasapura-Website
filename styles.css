@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #F2DF74; /* Light Yellow */
+    color: #A9B2B1; /* Light Gray */
 }
 
 /* Dropdown Menu */
@@ -136,7 +136,7 @@ nav ul li a:hover {
 
 /* Meetings Section */
 .meetings-section {
-    background-color: #F7F5ED; /* Light Yellow */
+    background-color: #A9B2B1; /* Light Gray */
     padding: 60px 20px;
     text-align: center;
 }
@@ -199,7 +199,7 @@ nav ul li a:hover {
 /* Why Join Us Section */
 .why-join-us-section {
     padding: 60px;
-    background-image: linear-gradient(to right, #F2DF74, #A9B2B1);
+    background-color: #A9B2B1; /* Light Gray */
     text-align: center;
     margin: 60px auto;
     border-radius: 15px;
@@ -305,11 +305,11 @@ nav ul li a:hover {
 }
 
 .contact-item a {
-    color: #F2DF74; /* Light Yellow */
+    color: #A9B2B1; /* Light Gray */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .contact-item a:hover {
-    color: #FFDFBA; /* Lighter yellow shade on hover */
+    color: #d1d7da; /* Lighter shade on hover */
 }
