@@ -6,217 +6,177 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: white;
     color: #004165;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
+/* Container */
 .container {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
 }
 
+/* Header and Navigation */
 header {
     background-color: #004165;
-    padding: 1em 0;
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+}
+
+header .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 .logo {
-    height: 50px;
+    width: 150px;
 }
 
 nav ul {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-}
-
-nav ul li {
-    margin: 0 15px;
+    gap: 20px;
 }
 
 nav ul li a {
-    color: white;
+    color: #F2DF74;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #A9B2B1;
 }
 
 .search-bar {
     padding: 5px;
-    border-radius: 5px;
     border: 1px solid #A9B2B1;
+    border-radius: 4px;
 }
 
-.hero {
-    background-image: url('hero-image.jpg');
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    color: #F2DF74;
+}
+
+/* Hero Section */
+.overlapped-section {
+    position: relative;
     background-size: cover;
     background-position: center;
-    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
     text-align: center;
-    padding: 100px 0;
-    position: relative;
+    background-color: #004165;
 }
 
-.hero-content {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.overlapped-section .content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #F2DF74;
+}
+
+.overlapped-section .content h2 {
+    font-size: 2rem;
+    color: #A9B2B1;
+}
+
+.whatsapp-link {
     display: inline-block;
-}
-
-.hero h2, .hero h1 {
-    margin-bottom: 15px;
-}
-
-.cta {
-    background-color: #F2DF74;
     padding: 10px 20px;
+    background-color: #772432;
+    color: white;
+    border-radius: 25px;
     text-decoration: none;
-    color: #772432;
-    border-radius: 5px;
-    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.section {
-    padding: 50px 0;
+.whatsapp-link:hover {
+    background-color: #A9B2B1;
+    color: #004165;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-h3 {
-    color: #772432;
+/* Meetings Section */
+.meetings-section {
+    padding: 60px 0;
+    background-color: #F2DF74;
+    color: #004165;
 }
 
 .meeting-details {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 40px;
 }
 
-.meeting-info {
-    width: 45%;
-    margin-bottom: 20px;
+.meeting-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.meeting-info ul {
+    list-style: none;
+}
+
+.meeting-info ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.meeting-link {
+    color: #004165;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.meeting-link:hover {
+    text-decoration: underline;
+}
+
+/* Why Join Us Section */
+.why-join-us-section {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.why-join-us-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
 .points-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 .point {
-    width: 30%;
-    margin-bottom: 20px;
-}
-
-.gallery {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.gallery-item {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border: 2px solid #A9B2B1;
-}
-
-.join-us-bar {
     background-color: #004165;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.contact-item {
-    margin: 5px 0;
-}
-
-/* Responsive Design */
-
-/* For mobile devices (width up to 600px) */
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    .search-bar {
-        margin-top: 10px;
-    }
-
-    .hero-content {
-        width: 90%;
-    }
-
-    .meeting-info {
-        width: 100%;
-    }
-
-    .point {
-        width: 100%;
-    }
-
-    .gallery-item {
-        width: 100%;
-    }
-
-    .meeting-details {
-        flex-direction: column;
-    }
-}
-
-/* For tablets (width 601px to 992px) */
-@media (min-width: 601px) and (max-width: 992px) {
-    .container {
-        width: 90%;
-    }
-
-    .meeting-info {
-        width: 100%;
-    }
-
-    .point {
-        width: 48%;
-    }
-
-    .gallery-item {
-        width: 48%;
-    }
-
-    .meeting-details {
-        flex-direction: row;
-    }
-}
-
-/* For laptops and desktops (above 992px) */
-@media (min-width: 993px) {
-    .container {
-        width: 85%;
-    }
-
-    .meeting-info {
-        width: 45%;
-    }
-
-    .point {
-        width: 30%;
-    }
-
-    .gallery-item {
-        width: 200px;
-    }
-}
+    color: #F2DF74;
+    padding: 20
