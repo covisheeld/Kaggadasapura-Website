@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +19,10 @@ body {
 header {
     background-color: #004165;
     padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -93,10 +98,12 @@ h3 {
 .meeting-details {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .meeting-info {
     width: 45%;
+    margin-bottom: 20px;
 }
 
 .points-container {
@@ -114,6 +121,7 @@ h3 {
     display: flex;
     gap: 15px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .gallery-item {
@@ -127,4 +135,88 @@ h3 {
     background-color: #004165;
     color: white;
     text-align: center;
-    padding:
+    padding: 20px 0;
+}
+
+.contact-item {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+
+/* For mobile devices (width up to 600px) */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    .meeting-info {
+        width: 100%;
+    }
+
+    .point {
+        width: 100%;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .meeting-details {
+        flex-direction: column;
+    }
+}
+
+/* For tablets (width 601px to 992px) */
+@media (min-width: 601px) and (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+
+    .meeting-info {
+        width: 100%;
+    }
+
+    .point {
+        width: 48%;
+    }
+
+    .gallery-item {
+        width: 48%;
+    }
+
+    .meeting-details {
+        flex-direction: row;
+    }
+}
+
+/* For laptops and desktops (above 992px) */
+@media (min-width: 993px) {
+    .container {
+        width: 85%;
+    }
+
+    .meeting-info {
+        width: 45%;
+    }
+
+    .point {
+        width: 30%;
+    }
+
+    .gallery-item {
+        width: 200px;
+    }
+}
