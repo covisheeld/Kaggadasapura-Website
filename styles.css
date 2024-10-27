@@ -1,315 +1,130 @@
-body {
-    font-family: 'Arial', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: white;
-    color: #333; /* Standard dark text color */
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #772432; /* Dark Red */
-    color: white;
-    padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #004165;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #004165;
+    padding: 1em 0;
 }
 
 .logo {
-    width: 100px;
+    height: 50px;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    list-style-type: none;
 }
 
 nav ul li {
-    margin-left: 20px;
-    position: relative;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #A9B2B1; /* Light Gray */
-}
-
-/* Dropdown Menu */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    color: #772432;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 4px;
-}
-
-.dropdown-content li {
-    padding: 12px 16px;
-}
-
-.dropdown-content li a {
-    color: #772432;
-    text-decoration: none;
-}
-
-.dropdown-content li:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Search Bar */
 .search-bar {
     padding: 5px;
-    font-size: 1em;
-    border: 2px solid #004165;
     border-radius: 5px;
-    outline: none;
-    width: 200px;
+    border: 1px solid #A9B2B1;
 }
 
-/* Overlapped Section */
-.overlapped-section {
-    position: relative;
-    background-image: url('IMG_20240526_172835.jpg'); /* Replace with your image path */
+.hero {
+    background-image: url('hero-image.jpg');
     background-size: cover;
     background-position: center;
-    height: 450px; /* Adjust height as necessary */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Transparent black layer */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     color: white;
     text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
 }
 
-.content h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+.hero h2, .hero h1 {
+    margin-bottom: 15px;
 }
 
-.whatsapp-link {
-    background-color: #25D366; /* WhatsApp green */
-    color: white;
-    padding: 12px 25px;
+.cta {
+    background-color: #F2DF74;
+    padding: 10px 20px;
     text-decoration: none;
+    color: #772432;
     border-radius: 5px;
-    font-size: 1.3em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
+    font-weight: bold;
 }
 
-.whatsapp-link:hover {
-    background-color: #1EBE5A;
+.section {
+    padding: 50px 0;
 }
 
-/* Meetings Section */
-.meetings-section {
-    background-color: #A9B2B1; /* Light Gray */
-    padding: 60px 20px;
+h2 {
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.meetings-section h2 {
-    color: #772432; /* Dark Red */
-    font-size: 2.8em;
-    margin-bottom: 30px;
+h3 {
+    color: #772432;
 }
 
 .meeting-details {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    justify-content: space-between;
 }
 
 .meeting-info {
-    background: rgba(0, 0, 0, 0.05); /* Light transparent black */
-    border-radius: 10px;
-    padding: 30px;
-    margin: 20px;
-    width: 30%; /* Adjust width as needed */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.meeting-info:hover {
-    transform: translateY(-10px);
-}
-
-.meeting-info h3 {
-    color: #004165; /* Blue */
-    margin-bottom: 15px;
-}
-
-.meeting-info p, .meeting-info ul {
-    color: #333;
-}
-
-.meeting-textbox {
-    width: 250px;
-    padding: 12px;
-    border: 2px solid #004165; /* Blue */
-    border-radius: 5px;
-    background-color: #fff; /* White */
-    color: #333;
-    margin-right: 10px;
-}
-
-.meeting-link {
-    background-color: #772432; /* Dark Red */
-    color: white;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-/* Why Join Us Section */
-.why-join-us-section {
-    padding: 60px;
-    background-color: #A9B2B1; /* Light Gray */
-    text-align: center;
-    margin: 60px auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.why-join-us-section h1 {
-    font-size: 3.5em;
-    color: #772432; /* Dark Red */
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 45%;
 }
 
 .points-container {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .point {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    padding: 30px;
-    width: 280px;
-    transition: transform 0.3s ease;
-}
-
-.point:hover {
-    transform: translateY(-8px);
-}
-
-.point strong {
-    display: block;
-    font-size: 1.3em;
-    color: #004165; /* Blue */
-}
-
-.point p {
-    margin-top: 10px;
-    color: #333;
-}
-
-/* Glimpses Section */
-.glimpses-section {
-    padding: 60px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.glimpses-section h2 {
-    font-size: 2.8em;
-    color: #004165; /* Blue */
-    margin-bottom: 30px;
+    width: 30%;
+    margin-bottom: 20px;
 }
 
 .gallery {
     display: flex;
-    flex-wrap: wrap;
+    gap: 15px;
     justify-content: center;
-    gap: 20px;
 }
 
 .gallery-item {
-    width: 220px; /* Adjust as needed */
-    height: 160px; /* Maintain aspect ratio */
+    width: 200px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
-/* Join Us Section */
-.join-us-section {
-    background-color: #772432; /* Dark Red */
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-    margin-top: 60px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid #A9B2B1;
 }
 
 .join-us-bar {
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.join-us-bar h2 {
-    font-size: 2em;
-    margin: 0;
-}
-
-.contact-item {
-    font-size: 1.2em;
-    margin-top: 15px;
-}
-
-.contact-item a {
-    color: #A9B2B1; /* Light Gray */
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contact-item a:hover {
-    color: #d1d7da; /* Lighter shade on hover */
-}
+    background-color: #004165;
+    color: white;
+    text-align: center;
+    padding:
