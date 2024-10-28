@@ -1,17 +1,16 @@
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f9;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #fffef0; /* Soft white */
+    color: #333;
+    margin: 0;
 }
 
 /* Navigation Bar */
@@ -21,6 +20,16 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo {
@@ -31,13 +40,17 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    flex: 1;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     margin: 0;
+    padding-left: 0;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .nav-links li {
@@ -77,145 +90,75 @@ nav {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
-    overflow: hidden;
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    transition: background-color 0.3s ease;
-}
-
-.overlapped-section:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
-    position: relative;
     text-align: center;
-    z-index: 1;
-    padding: 20px;
-    animation: fadeIn 1.2s ease-in-out;
+    z-index: 2;
 }
 
-.club-name {
-    font-size: 4.5rem;
+h1 {
+    font-size: 3rem;
     font-weight: 700;
-    color: #ffd700; /* Gold */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 
-.empowering-statement {
-    font-size: 2.2rem;
-    font-weight: 400;
-    margin-top: 10px;
-    color: #ffffff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .whatsapp-link {
-    margin-top: 30px;
     display: inline-block;
-    padding: 14px 28px;
-    background-color: #25d366; /* WhatsApp green */
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #25D366;
     color: white;
     font-weight: 600;
-    border-radius: 30px;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.whatsapp-link:hover {
-    background-color: #1da851;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Dropdown Styles */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    border-radius: 8px;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    top: 40px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content li {
-    padding: 12px 16px;
+    border-radius: 30px;
     transition: background-color 0.3s ease;
 }
 
-.dropdown-content li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.dropdown-content li a:hover {
-    background-color: #f0f0f0;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.whatsapp-link:hover {
+    background-color: #20b358;
 }
 
 /* Meetings Section */
 .meetings-section {
-    padding: 80px 0;
-    background-color: #ffffff;
-}
-
-.meetings-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 40px;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
     color: #333;
 }
 
 .meeting-details {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .meeting-info {
-    flex-basis: 45%;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%;
 }
 
 .meeting-info h3 {
-    font-size: 1.8rem;
-    color: #0056b3;
+    font-size: 1.6rem;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .meeting-info ul {
@@ -224,117 +167,148 @@ nav {
 }
 
 .meeting-info ul li {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
-.meeting-info a {
+.meeting-link {
     color: #0056b3;
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.meeting-info a:hover {
-    text-decoration: underline;
+.meeting-link:hover {
+    color: #004080;
+}
+
+/* Why Join Us Section */
+.why-join-us-section {
+    padding: 80px 20px;
+    background-color: #fffef0;
+}
+
+.points-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.point {
+    flex: 1 1 45%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.point strong {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.point p {
+    font-size: 1rem;
+    color: #555;
 }
 
 /* Glimpses Section */
 .glimpses-section {
-    background-color: #f0f0f0;
-    padding: 80px 0;
-    text-align: center;
-}
-
-.glimpses-section h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 40px;
-    color: #333;
+    padding: 80px 20px;
+    background-color: #f1f1f1;
 }
 
 .gallery {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .gallery-item {
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .show-more-btn {
-    margin-top: 30px;
-    padding: 12px 24px;
-    background-color: #ffd700;
-    color: #333;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
     font-weight: 600;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
 }
 
 .show-more-btn:hover {
-    background-color: #ffbf00;
-    transform: translateY(-3px);
+    background-color: #004080;
 }
 
-/* Footer Section */
+/* Join Us Section */
 .join-us-section {
-    background-color: #0056b3;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
-.join-us-section h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+.join-us-bar {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.join-us-bar p {
-    font-size: 1.2rem;
-    margin: 20px 0;
-}
-
-.instagram-link {
-    color: #ffd700;
+.join-us-bar h2 {
+    font-size: 2rem;
     font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-item a {
+    color: #ffd700;
     text-decoration: none;
 }
 
-.instagram-link:hover {
-    text-decoration: underline;
+.contact-item a:hover {
+    color: #ffcc00;
 }
 
-/* Responsive Design */
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 2rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
+    .nav-links {
+        display: none;
     }
 
-    .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
+    .mobile-menu {
+        display: block;
+    }
+
+    .search-bar {
+        width: 100%;
     }
 
     .meeting-details {
         flex-direction: column;
-        align-items: center;
     }
 
-    .gallery {
+    .points-container {
         flex-direction: column;
     }
 }
