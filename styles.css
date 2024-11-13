@@ -184,13 +184,14 @@ h2 {
 /* Why Join Us Section */
 .why-join-us-section {
     padding: 80px 20px;
-    background-color: #fffef0;
+    background-color: #FFFFFF;
 }
 
 .points-container {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+    background-color: white;
 }
 
 .point {
@@ -311,4 +312,94 @@ h2 {
     .points-container {
         flex-direction: column;
     }
+}/* Navigation Bar */
+header {
+    background-color: #772432; /* Toastmasters Maroon */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    max-width: 150px;
+    margin-right: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+    position: relative;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Dropdown Styles for About Us */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; /* White background */
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content li a {
+    color: #333;
+    padding: 10px;
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1; /* Light grey on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
