@@ -1,0 +1,498 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #fffef0; /* Soft white */
+    color: #333;
+    margin: 0;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #772432; /* Toastmasters Maroon */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    max-width: 150px;
+    margin-right: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+    position: relative;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Dropdown Styles for About Us */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; /* White background */
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content li a {
+    color: #333;
+    padding: 10px;
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1; /* Light grey on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+/* Hero Section */
+.overlapped-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.whatsapp-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    background-color: #20b358;
+}
+
+/* Meetings Section */
+.meetings-section {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.meeting-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: #FFFFFF;
+}
+
+.meeting-info {
+    flex: 1 1 45%;
+}
+
+.meeting-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.meeting-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.meeting-info ul li {
+    margin-bottom: 10px;
+}
+
+.meeting-link {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.meeting-link:hover {
+    color: #004080;
+}
+
+/* Why Join Us Section */
+.why-join-us-section {
+    padding: 80px 20px;
+    background-color: #FFFFFF;
+}
+
+.points-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color:white;
+}
+
+.point {
+    flex: 1 1 45%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.point strong {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.point p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Glimpses Section */
+.glimpses-section {
+    padding: 80px 20px;
+    background-color: #f1f1f1;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.show-more-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background-color: #004080;
+}
+
+/* Join Us Section */
+.join-us-section {
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.join-us-bar {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join-us-bar h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-item a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #ffcc00;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .meeting-details {
+        flex-direction: column;
+    }
+
+    .points-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-title {
+        font-size: 18px;
+    }
+
+    .contact-link {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .contact-icon {
+        font-size: 18px;
+    }
+
+    .footer-rights {
+        font-size: 12px;
+    }
+}
+/* Footer Styles */
+.footer {
+    background-color: #004165; /* Toastmasters Blue */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+.footer-link i {
+    font-size: 20px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Join Form Section */
+.join-form-section {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.join-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.join-form-section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.join-us-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #004165; /* Toastmasters Blue */
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #004165; /* Toastmasters Blue */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #00334d; /* Darker Blue */
+}
+
+.form-message {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #28a745; /* Green for success message */
+}
+
+
