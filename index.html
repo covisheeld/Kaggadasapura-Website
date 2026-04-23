@@ -9,6 +9,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- ✅ AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,9 +19,17 @@
 <!-- ===== HEADER ===== -->
 <header>
     <div class="container header-container">
+
         <a href="https://www.toastmasters.org/" target="_blank" class="logo-link">
-    <img src="./assets/toastmasters-logo-color.png" alt="Toastmasters Logo" class="logo">
-</a>
+            <img src="./assets/toastmasters-logo-color.png" alt="Toastmasters Logo" class="logo">
+        </a>
+
+        <!-- ✅ HAMBURGER -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <!-- NAV -->
         <nav>
@@ -26,7 +37,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#meetings">Meetings</a></li>
                 <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#glimpses">Gallery</a></li>
+                <li><a href="#glimpses">Glimpses</li>
                 <li><a href="https://www.toastmastersd92.org/" target="_blank">District 92</a></li>
             </ul>
         </nav>
@@ -36,14 +47,14 @@
 
 <!-- ===== HERO ===== -->
 <section class="overlapped-section" id="home"
-    style="background-image: url('./Assets/Logo - Kaggadasapura Toastmasters Club .jpg');">
+    style="background-image: url('./Assets/toastmasters-logo-color.png');">
     
     <div class="overlay">
-        <div class="content">
+        <div class="content" data-aos="fade-up">
             <h1>KR Puram Rising Orators</h1>
             <h2>Empowering Confident Communicators & Leaders</h2>
 
-            <a href="https://chat.whatsapp.com/Gd8UDkE3geG4UFzKl6s0a5" target="_blank"
+            <a href="https://chat.whatsapp.com/KjpvZXKV9HoEKYkCSJCfdE?mode=gi_t" target="_blank"
                 class="whatsapp-link">
                 Join Our Guest Group
             </a>
@@ -59,19 +70,19 @@
 
     <div class="meeting-details">
 
-        <div class="meeting-info">
+        <div class="meeting-info" data-aos="fade-up">
             <h3>Regular Meetings</h3>
             <ul>
                 <li><strong>Every Saturday:</strong> 11:00 AM - 12:30 PM</li>
                 <li>Active roles: Speakers, Evaluators</li>
                 <li>Beginner-friendly environment</li>
                 <li><strong>Online:</strong> 
-                    <a href="#" class="meeting-link">Join Meeting</a>
+                    <a href="https://tinyurl.com/MeetNGrowth-CapitalandTM" target= "_blank" class="meeting-link">Join Meeting</a>
                 </li>
             </ul>
         </div>
 
-        <div class="meeting-info">
+        <div class="meeting-info" data-aos="fade-up">
             <h3>Special Events</h3>
             <ul>
                 <li>Linkers Meetings</li>
@@ -93,28 +104,41 @@
     <div class="achievements-content">
         <ul>
 
-            <li>
-                <strong>Kumar Ashutosh</strong>
-                <p>Winner - Table Topics | Runner-up - Evaluation</p>
-                <img src="./Assets/Area E1 Winners List .jpg" class="achievement-img">
+            <li data-aos="zoom-in">
+                <strong>Yashika Nathwani, DTM</strong>
+                <p>Area E3 Director, PY 2021-2022 <br>
+                Division E Director, PY 2022-2023 <br>
+                Leadership Developement Program (LDP) Coordinator,<br>PY 2023 - 2024 <br>
+                Coronation Chair, PY 2024-2025 <br>
+                Club Growth Director - District 92,  <br> PY 2025-2026</p>
+                <img src="./Assets/Yashika.jpeg" class="achievement-img">
             </li>
 
-            <li>
-                <strong>Rachana Kulkarni</strong>
-                <p>Division E Director</p>
-                <img src="./Assets/Rachana.jpg" class="achievement-img">
+            <li data-aos="zoom-in">
+                <strong>Simaab Siddique, DTM</strong>
+                <p> Area E1 Director, PY 2022-2023 <br>
+                Division E Director, PY 2023-2024 <br>
+                District Chief Judge, District 92, <br> PY 2024-2025 <br>
+                Club Extension Lead(CGD Office, District 92), <br> PY 2025-2026</p>
+                <img src="./Assets/Simaab.jpeg" class="achievement-img">
             </li>
 
-            <li>
+            <li data-aos="zoom-in">
+                <strong>Parish Vernekar</strong>
+                <p>Area N4 Director, District 92 <br>PY 2019-2020</p>
+                <p>Division E Director, District 92 <br>PY 2020-2021</p>
+                <img src="./Assets/Parish.jpeg" class="achievement-img">
+            </li>
+
+            <li data-aos="zoom-in">
                 <strong>H Pranav</strong>
-                <p>Area E1 Director</p>
+                <p>Area E1 Director, District 92 <br>PY 2024-2025</p>
                 <img src="./Assets/AD H Pranav .jpg" class="achievement-img">
             </li>
-
-            <li>
-                <strong>Senjuti Sen</strong>
-                <p>Area E4 Director</p>
-                <img src="./Assets/Senjuti.jpg" class="achievement-img">
+            <li data-aos="zoom-in">
+                <strong>Donthi Divya</strong>
+                <p>Area E4 Director, District 92 <br>PY 2025-2026</p>
+                <img src="./Assets/Divya.jpeg" class="achievement-img">
             </li>
 
         </ul>
@@ -129,22 +153,22 @@
 
     <div class="points-container">
 
-        <div class="point">
+        <div class="point" data-aos="fade-up">
             <strong>🎤 Public Speaking</strong>
             <p>Build confidence and clarity in communication.</p>
         </div>
 
-        <div class="point">
+        <div class="point" data-aos="fade-up">
             <strong>👔 Leadership</strong>
             <p>Take leadership roles and grow professionally.</p>
         </div>
 
-        <div class="point">
+        <div class="point" data-aos="fade-up">
             <strong>🤝 Support</strong>
             <p>Safe and encouraging learning environment.</p>
         </div>
 
-        <div class="point">
+        <div class="point" data-aos="fade-up">
             <strong>🌏 Networking</strong>
             <p>Connect with like-minded professionals.</p>
         </div>
@@ -159,19 +183,20 @@
     </div>
 
     <div class="gallery">
-        <img src="./Assets/WhatsApp Image 2025-02-15.jpg" class="gallery-item">
-        <img src="./Assets/Rendezvous Meeting members photo .jpg" class="gallery-item">
-        <img src="./Assets/Rendezvous Meeting.jpg" class="gallery-item">
+        <img src="./Assets/Meetings 1.jpeg" class="gallery-item" data-aos="zoom-in">
+        <img src="./Assets/Meetings 2.jpeg" class="gallery-item" data-aos="zoom-in">
+        <img src="./Assets/Meetings 3.jpg" class="gallery-item" data-aos="zoom-in">
+        <img src="./Assets/Meetings 4.jpeg" class="gallery-item" data-aos="zoom-in">
     </div>
 </section>
 
 <!-- ===== CTA SECTION ===== -->
-<section class="cta-section">
+<section class="cta-section" data-aos="fade-up">
     <h2>Ready to Grow as a Leader?</h2>
     <p>Join KR Puram Rising Orators Toastmasters Club and start your journey today.</p>
 
     <div class="cta-buttons">
-        <a href="https://chat.whatsapp.com/Gd8UDkE3geG4UFzKl6s0a5" target="_blank" class="cta-primary">
+        <a href="https://chat.whatsapp.com/Gd8UDkE3geG4UFzKl6s0a5" target="_blank" class="cta-secondary">
             Visit a Meeting
         </a>
 
@@ -181,8 +206,7 @@
     </div>
 </section>
 
-
-<!-- ===== TEAM SECTION ===== -->
+<!-- ===== TEAM ===== -->
 <section class="team">
     <div class="heading">
         <h1>Meet Our Leaders</h1>
@@ -190,21 +214,21 @@
 
     <div class="team-grid">
 
-        <div class="team-member">
-            <img src="./assets/member1.jpg" alt="President" loading="lazy">
-            <h4>President Name</h4>
+        <div class="team-member" data-aos="zoom-in">
+            <img src="./assets/Yashika - Copy.jpeg">
+            <h4>Yashika Nathwani, DTM</h4>
             <p>President</p>
         </div>
 
-        <div class="team-member">
-            <img src="./assets/member2.jpg" alt="VP Education" loading="lazy">
-            <h4>Member Name</h4>
+        <div class="team-member" data-aos="zoom-in">
+            <img src="./assets/Divya.jpeg">
+            <h4>Donthi Divya</h4>
             <p>Vice President Education</p>
         </div>
 
-        <div class="team-member">
-            <img src="./assets/member3.jpg" alt="VP Membership" loading="lazy">
-            <h4>Member Name</h4>
+        <div class="team-member" data-aos="zoom-in">
+            <img src="./assets/">
+            <h4>Sarita Kumari</h4>
             <p>Vice President Membership</p>
         </div>
 
@@ -218,21 +242,35 @@
         <div class="footer-contact">
             <h3>Contact Us</h3>
 
-            <a href="tel:+919980562640" class="footer-link">
-                <i class="fas fa-phone"></i> +91 99805 62640
+            <a href="tel:+917760764448" class="footer-link">
+                <i class="fas fa-phone"></i> +91 77607 64448
             </a>
 
-            <a href="mailto:kaggadasapuratoastmastersclub@gmail.com" class="footer-link">
+            <a href="mailto:divyashitha@gmail.com" class="footer-link">
                 <i class="fas fa-envelope"></i> Email Us
             </a>
 
-            <a href="https://www.instagram.com/tmi_kaggadasapura/" target="_blank" class="footer-link">
-                <i class="fab fa-instagram"></i> Instagram
+            <a href="https://dashboards.toastmasters.org/ClubReport.aspx?id=07983741" target="_blank" class="footer-link">
+                <i class="fab fa-instagram"></i> Dashboard
             </a>
         </div>
 
     </div>
 </footer>
+
+<!-- ✅ SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 1000,
+    once: true
+});
+
+function toggleMenu() {
+    document.querySelector("nav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
