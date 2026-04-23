@@ -25,19 +25,111 @@ body {
 }
 
 /* ===== HEADER ===== */
+/* =========================================
+   🍏 APPLE FLOATING GLASS NAVBAR (FINAL)
+   ========================================= */
+
+/* NAVBAR BASE */
 header {
-    background: linear-gradient(90deg, #772432, #004165);
-    padding: 12px 0;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1100px;
     z-index: 1000;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    background: rgba(0, 65, 101, 0.65);
+    border-radius: 50px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+
+    transition: all 0.4s ease;
 }
-/* Make header content in one line */
+
+/* CONTAINER */
 header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 25px;
+}
+
+/* NAV ALIGNMENT FIX */
+nav {
+    margin-left: auto;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.nav-links a:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+/* UNDERLINE ANIMATION */
+.nav-links a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #F2DF74;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* EXTERNAL LINK ICON FIX */
+.nav-links a[target="_blank"]::after {
+    content: " ↗";
+    margin-left: 4px;
+    font-size: 0.8rem;
+}
+
+/* BODY OFFSET (VERY IMPORTANT) */
+body {
+    padding-top: 120px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    header {
+        width: 95%;
+        border-radius: 20px;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        margin-left: 0;
+    }
 }
 
 /* Keep nav in one line */
@@ -271,8 +363,9 @@ section {
 
 .gallery-item {
     width: 100%;
+    aspect-ratio: 4 / 3; /* or 1/1 or 16/9 */
+    object-fit: cover;
     border-radius: 12px;
-    transition: 0.3s;
 }
 
 .gallery-item:hover {
@@ -461,7 +554,7 @@ input, textarea {
     width: 140px;
     height: 140px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 16px;
     transition: 0.3s;
 }
 
@@ -472,4 +565,236 @@ input, textarea {
 .team-member h4 {
     margin-top: 10px;
     color: #004165;
+}
+/* ===== APPLE + HAMBURGER ===== */
+
+header {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 65, 101, 0.85);
+}
+
+a, button {
+    transition: all 0.3s ease;
+}
+
+section {
+    padding: 90px 20px;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* =========================================
+   🔥 AWWARDS LEVEL ADD-ONS (NON-DESTRUCTIVE)
+   ========================================= */
+
+/* ===== DARK MODE ===== */
+body.dark-mode {
+    background: #0b0f19;
+    color: #f5f5f5;
+}
+
+body.dark-mode header {
+    background: rgba(10, 15, 30, 0.9);
+}
+
+body.dark-mode .meeting-info,
+body.dark-mode .achievements-content li,
+body.dark-mode .point {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+body.dark-mode .footer {
+    background: linear-gradient(90deg, #000, #111);
+}
+
+/* ===== DARK MODE TOGGLE BUTTON ===== */
+.dark-toggle {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #004165;
+    color: white;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ===== CURSOR GLOW ===== */
+.cursor-glow {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(242,223,116,0.4) 0%, transparent 70%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+/* ===== MAGNETIC BUTTON EFFECT ===== */
+button, .cta-primary, .cta-secondary, .whatsapp-link {
+    transition: transform 0.2s ease;
+}
+
+button:hover, .cta-primary:hover, .cta-secondary:hover {
+    transform: scale(1.08) translateY(-2px);
+}
+
+/* ===== 3D TILT CARDS ===== */
+.team-member, 
+.achievements-content li,
+.point {
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+}
+
+.team-member:hover,
+.achievements-content li:hover,
+.point:hover {
+    transform: rotateY(6deg) rotateX(6deg) scale(1.03);
+}
+
+/* ===== HERO APPLE STYLE ANIMATION ===== */
+.content {
+    animation: heroReveal 1.5s ease;
+}
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===== SMOOTH IMAGE HOVER (APPLE STYLE) ===== */
+img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* ===== SCROLL REVEAL BASE ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== LOADING SCREEN ===== */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #004165;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+/* ===== HEADER SHRINK ON SCROLL ===== */
+header.shrink {
+    padding: 6px 0;
+    transition: 0.3s;
+}
+
+/* ===== NAV LINK EXTERNAL ICON ===== */
+.nav-links a[target="_blank"]::after {
+    content: " ↗";
+    font-size: 0.8rem;
+}
+
+/* ===== ACHIEVEMENT IMAGE FIX (TOP ALIGN) ===== */
+.achievements-content li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievements-content li img {
+    order: -1;
+    margin-bottom: 12px;
+}
+
+/* ===== BETTER SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #004165;
+    border-radius: 10px;
+}
+
+/* ===== MOBILE IMPROVEMENTS ===== */
+@media (max-width: 768px) {
+
+    .content {
+        padding: 0 10px;
+    }
+
+    .cta-buttons a {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .team-member img {
+        width: 110px;
+        height: 110px;
+    }
 }
